@@ -1,6 +1,6 @@
 ﻿namespace SimpleDataApp
 {
-    partial class Form1
+    partial class NewCustomer
     {
         /// <summary>
         /// Required designer variable.
@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.gbAddAccount = new System.Windows.Forms.GroupBox();
+            this.SuspendLayout();
+            // 
+            // gbAddAccount
+            // 
+            this.gbAddAccount.Location = new System.Drawing.Point(12, 12);
+            this.gbAddAccount.Name = "gbAddAccount";
+            this.gbAddAccount.Size = new System.Drawing.Size(217, 80);
+            this.gbAddAccount.TabIndex = 0;
+            this.gbAddAccount.TabStop = false;
+            this.gbAddAccount.Text = "Add Account";
+            // 
+            // NewCustomer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(508, 306);
+            this.Controls.Add(this.gbAddAccount);
+            this.Name = "NewCustomer";
+            this.Text = "NewCustomer";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.GroupBox gbAddAccount;
     }
 }
-

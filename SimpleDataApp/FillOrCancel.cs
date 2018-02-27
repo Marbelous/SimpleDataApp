@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SimpleDataApp
 {
-    public partial class Form1 : Form
+    public partial class FillOrCancel : Form
     {
-        public Form1()
+        public FillOrCancel()
         {
             InitializeComponent();
         }
