@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.gbAddAccount = new System.Windows.Forms.GroupBox();
-            this.tbCustomerName = new System.Windows.Forms.TextBox();
+            this.lblCustomerID = new System.Windows.Forms.Label();
             this.lblCustomerName = new System.Windows.Forms.Label();
             this.tbCustomerID = new System.Windows.Forms.TextBox();
-            this.lblCustomerID = new System.Windows.Forms.Label();
+            this.tbCustomerName = new System.Windows.Forms.TextBox();
             this.gbCreateOrder = new System.Windows.Forms.GroupBox();
-            this.numOrderAmount = new System.Windows.Forms.NumericUpDown();
-            this.lblOrderAmount = new System.Windows.Forms.Label();
             this.dtpOrderDate = new System.Windows.Forms.DateTimePicker();
             this.lblOrderDate = new System.Windows.Forms.Label();
+            this.lblOrderAmount = new System.Windows.Forms.Label();
+            this.numOrderAmount = new System.Windows.Forms.NumericUpDown();
             this.btnFinish = new System.Windows.Forms.Button();
             this.btnCreateAccount = new System.Windows.Forms.Button();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
@@ -60,12 +60,14 @@
             this.gbAddAccount.TabStop = false;
             this.gbAddAccount.Text = "Add Account";
             // 
-            // tbCustomerName
+            // lblCustomerID
             // 
-            this.tbCustomerName.Location = new System.Drawing.Point(96, 19);
-            this.tbCustomerName.Name = "tbCustomerName";
-            this.tbCustomerName.Size = new System.Drawing.Size(152, 20);
-            this.tbCustomerName.TabIndex = 0;
+            this.lblCustomerID.AutoSize = true;
+            this.lblCustomerID.Location = new System.Drawing.Point(8, 48);
+            this.lblCustomerID.Name = "lblCustomerID";
+            this.lblCustomerID.Size = new System.Drawing.Size(65, 13);
+            this.lblCustomerID.TabIndex = 1;
+            this.lblCustomerID.Text = "Customer ID";
             // 
             // lblCustomerName
             // 
@@ -84,14 +86,12 @@
             this.tbCustomerID.Size = new System.Drawing.Size(152, 20);
             this.tbCustomerID.TabIndex = 0;
             // 
-            // lblCustomerID
+            // tbCustomerName
             // 
-            this.lblCustomerID.AutoSize = true;
-            this.lblCustomerID.Location = new System.Drawing.Point(8, 48);
-            this.lblCustomerID.Name = "lblCustomerID";
-            this.lblCustomerID.Size = new System.Drawing.Size(65, 13);
-            this.lblCustomerID.TabIndex = 1;
-            this.lblCustomerID.Text = "Customer ID";
+            this.tbCustomerName.Location = new System.Drawing.Point(96, 19);
+            this.tbCustomerName.Name = "tbCustomerName";
+            this.tbCustomerName.Size = new System.Drawing.Size(152, 20);
+            this.tbCustomerName.TabIndex = 0;
             // 
             // gbCreateOrder
             // 
@@ -105,27 +105,6 @@
             this.gbCreateOrder.TabIndex = 1;
             this.gbCreateOrder.TabStop = false;
             this.gbCreateOrder.Text = "Create Order";
-            // 
-            // numOrderAmount
-            // 
-            this.numOrderAmount.Location = new System.Drawing.Point(96, 20);
-            this.numOrderAmount.Maximum = new decimal(new int[] {
-            5000,
-            0,
-            0,
-            0});
-            this.numOrderAmount.Name = "numOrderAmount";
-            this.numOrderAmount.Size = new System.Drawing.Size(120, 20);
-            this.numOrderAmount.TabIndex = 0;
-            // 
-            // lblOrderAmount
-            // 
-            this.lblOrderAmount.AutoSize = true;
-            this.lblOrderAmount.Location = new System.Drawing.Point(18, 22);
-            this.lblOrderAmount.Name = "lblOrderAmount";
-            this.lblOrderAmount.Size = new System.Drawing.Size(72, 13);
-            this.lblOrderAmount.TabIndex = 1;
-            this.lblOrderAmount.Text = "Order Amount";
             // 
             // dtpOrderDate
             // 
@@ -144,14 +123,36 @@
             this.lblOrderDate.TabIndex = 1;
             this.lblOrderDate.Text = "Order Date";
             // 
+            // lblOrderAmount
+            // 
+            this.lblOrderAmount.AutoSize = true;
+            this.lblOrderAmount.Location = new System.Drawing.Point(18, 22);
+            this.lblOrderAmount.Name = "lblOrderAmount";
+            this.lblOrderAmount.Size = new System.Drawing.Size(72, 13);
+            this.lblOrderAmount.TabIndex = 1;
+            this.lblOrderAmount.Text = "Order Amount";
+            // 
+            // numOrderAmount
+            // 
+            this.numOrderAmount.Location = new System.Drawing.Point(96, 20);
+            this.numOrderAmount.Maximum = new decimal(new int[] {
+            5000,
+            0,
+            0,
+            0});
+            this.numOrderAmount.Name = "numOrderAmount";
+            this.numOrderAmount.Size = new System.Drawing.Size(120, 20);
+            this.numOrderAmount.TabIndex = 0;
+            // 
             // btnFinish
             // 
-            this.btnFinish.Location = new System.Drawing.Point(62, 241);
+            this.btnFinish.Location = new System.Drawing.Point(62, 251);
             this.btnFinish.Name = "btnFinish";
             this.btnFinish.Size = new System.Drawing.Size(75, 23);
             this.btnFinish.TabIndex = 2;
             this.btnFinish.Text = "Finish";
             this.btnFinish.UseVisualStyleBackColor = true;
+            this.btnFinish.Click += new System.EventHandler(this.btnFinish_Click);
             // 
             // btnCreateAccount
             // 
@@ -161,6 +162,7 @@
             this.btnCreateAccount.TabIndex = 2;
             this.btnCreateAccount.Text = "Create Account";
             this.btnCreateAccount.UseVisualStyleBackColor = true;
+            this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // btnPlaceOrder
             // 
@@ -170,6 +172,7 @@
             this.btnPlaceOrder.TabIndex = 2;
             this.btnPlaceOrder.Text = "Place Order";
             this.btnPlaceOrder.UseVisualStyleBackColor = true;
+            this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
             // 
             // btnAddAnotherAccount
             // 
@@ -180,6 +183,7 @@
             this.btnAddAnotherAccount.TabIndex = 2;
             this.btnAddAnotherAccount.Text = "Add Another Account";
             this.btnAddAnotherAccount.UseVisualStyleBackColor = true;
+            this.btnAddAnotherAccount.Click += new System.EventHandler(this.btnAddAnotherAccount_Click);
             // 
             // NewCustomer
             // 
