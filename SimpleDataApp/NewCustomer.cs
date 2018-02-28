@@ -158,7 +158,7 @@ namespace SimpleDataApp
 
         private void btnAddAnotherAccount_Click(object sender, EventArgs e)
         {
-
+            ClearForm();
         }
 
         private void btnFinish_Click(object sender, EventArgs e)
