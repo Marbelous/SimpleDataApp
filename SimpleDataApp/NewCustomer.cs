@@ -141,7 +141,7 @@ namespace SimpleDataApp
 
                             orderID = (int)sqlCommand.Parameters["@RC"].Value;
 
-                            MessageBox.Show("Order Number {0} has been submitted.", orderID.ToString());
+                            MessageBox.Show($"Order Number {orderID.ToString()} has been submitted.");
                         }
                         catch
                         {
@@ -163,7 +163,7 @@ namespace SimpleDataApp
 
         private void btnFinish_Click(object sender, EventArgs e)
         {
-
+            Close();
         }
     }
 }
